@@ -51,15 +51,17 @@ const Hero = () => {
           </p>
           <div className="links">
             {/* Download CV Button */}
-            <button className="cv-button">
-              Download CV
-              <img className="download-icon" src={download} alt="download" />
-              <img
-                className="download-icon-hover"
-                src={download2}
-                alt="download-hover"
-              />
-            </button>
+            <a href="https://drive.google.com/file/d/1rdrkaRIa3Z1Y7cYlrhe-eNf0oSOoKRh1/view?usp=sharing">
+              <button className="cv-button">
+                Download CV
+                <img className="download-icon" src={download} alt="download" />
+                <img
+                  className="download-icon-hover"
+                  src={download2}
+                  alt="download-hover"
+                />
+              </button>
+            </a>
 
             {/* Social Links */}
             <div className="social-links">

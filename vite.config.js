@@ -9,4 +9,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"), // Ensures '@' points to 'src'
     },
   },
+  build: {
+    outDir: "dist", // Default output directory for Vite builds
+  },
+  server: {
+    open: true, // Opens the app in the browser when running locally
+  },
 });
