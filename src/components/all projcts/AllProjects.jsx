@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./allProjects.scss";
+import "./allprojects.scss";
 import { ProjectsData } from "../projectsData/ProjectsData";
 
 const AllProjects = () => {
