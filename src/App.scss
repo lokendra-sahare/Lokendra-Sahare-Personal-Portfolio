@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700;800&display=swap");
+
+/* Universal reset and setting JetBrains Mono as the default font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace; /* Ensure fallback to monospace */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background: #1c1c22;
+  color: white; /* Ensures text color is set globally */
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Section styles */
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+/* Link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Loading spinner */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.loading-spinner {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures it is on top of everything */
+
+  img {
+    width: 300px;
+  }
+
+  &.fade-out {
+    animation: fadeOut 1s ease-out forwards; /* Apply the fade-out animation */
+  }
+}
+
+/* Optional custom class for JetBrains Mono with specific font-weight */
+.jetbrains-mono-unique-class {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400; /* You can dynamically change this from 100 to 800 */
+  font-style: normal;
+}
+
+/* Responsive mixins */
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+
+@include tablet {
+  .course {
+    .box {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

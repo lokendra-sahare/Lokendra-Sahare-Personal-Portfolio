@@ -1,0 +1,58 @@
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+
+    @media (max-width: 1400px) {
+      width: 80%;
+    }
+
+    @media (max-width: 560px) {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bolder;
+      display: flex;
+
+      span {
+        color: #00ff99;
+      }
+
+      /* Align the logo (h1) to the right when screen width is below 567px */
+      @media (max-width: 567px) {
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+
+    .buttons {
+      button {
+        padding: 10px 15px;
+        margin-left: 20px;
+        border-radius: 20px;
+        background: #00ff99;
+        border: 1px solid #00ff99;
+        font-size: 14px;
+        box-shadow: 0 0 10px rgba(0, 255, 153, 0.6); /* Add glow effect */
+        transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+      }
+
+      button:hover {
+        box-shadow: 0 0 15px rgba(0, 255, 153, 0.9); /* Intensify the glow on hover */
+      }
+
+      /* Hide the buttons when screen width is below 567px */
+      @media (max-width: 567px) {
+        display: none;
+      }
+    }
+  }
+}

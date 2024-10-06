@@ -1,0 +1,165 @@
+@import "../../App.scss";
+
+.contact {
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  @include tablet {
+    width: 90vw;
+    padding: 10px;
+    gap: 40px;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include mobile {
+      gap: 20px;
+      text-align: center;
+      align-items: center;
+      margin: 10px 70px 0 70px;
+    }
+
+    h1 {
+      font-size: 80px;
+      line-height: 88px;
+      color: #00ff99;
+
+      @include tablet {
+        font-size: 55px;
+        line-height: 1.1;
+      }
+
+      @include mobile {
+        font-size: 28px;
+        line-height: 1.1;
+      }
+    }
+
+    span {
+      font-weight: 300;
+    }
+
+    div {
+      h2 {
+        color: #0f9;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+
+    @include mobile {
+      padding: 50px;
+      width: 100%;
+      padding-top: 0px;
+    }
+
+    .phoneSvg {
+      stroke: #0f9;
+      position: absolute;
+      margin: auto;
+
+      svg {
+        width: 250px;
+        height: 250px;
+      }
+
+      svg {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        padding: 20px;
+        background: transparent;
+        border: 1px solid #0f9;
+        border-top: 2px solid #0f9;
+        color: white;
+        border-radius: 5px;
+        box-sizing: border-box; /* Ensure padding includes the border */
+        outline: none; /* Remove default focus outline */
+        transition: border-color 0.3s ease; /* Optional: smooth transition for border color */
+
+        @include mobile {
+          padding: 10px;
+        }
+
+        &:focus {
+          box-shadow: none; /* Remove any box shadow on focus */
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      button {
+        padding: 16px 0;
+        border-radius: 25px;
+        background: #00ff99;
+        border: 1px solid #00ff99;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 255, 153, 0.6); /* Add glow effect */
+        transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+
+        &:hover {
+          box-shadow: 0 0 15px rgba(0, 255, 153, 0.9); /* Intensify the glow on hover */
+        }
+      }
+
+      /* Success and Error Message Styling */
+      .successMessage,
+      .errorMessage {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth fade-in and slide */
+      }
+
+      .successMessage {
+        background-color: transparent;
+        color: #0f9;
+        border: 1px solid #0f9;
+      }
+
+      .errorMessage {
+        background-color: rgba(255, 0, 0, 0.2);
+        color: #ff0000;
+        border: 1px solid #ff0000;
+      }
+    }
+  }
+}

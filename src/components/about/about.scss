@@ -1,0 +1,326 @@
+.about-container {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1138px) {
+    width: 90%;
+  }
+
+  .main-about-container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: 700px) {
+      gap: 20px;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .all-about-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @media (max-width: 700px) {
+        gap: 15px;
+      }
+
+      .about-header {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (max-width: 700px) {
+          gap: 9px;
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 40px;
+
+          @media (max-width: 1010px) {
+            font-size: 30px;
+          }
+        }
+
+        p {
+          color: #c7c7c7;
+          width: 80%;
+          font-size: 15px;
+
+          @media (max-width: 700px) {
+            width: 80%;
+            margin: auto;
+          }
+        }
+      }
+
+      .about-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 20px;
+
+        @media (max-width: 700px) {
+          width: 250px;
+          gap: 12px;
+          margin: auto;
+        }
+
+        button {
+          font-size: 14px;
+          font-weight: bold;
+          background: #33333a;
+          color: white;
+          padding: 14px 0;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #0f9;
+          }
+
+          &:focus {
+            background-color: #0f9;
+          }
+        }
+      }
+    }
+
+    .content-container {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+
+      .content-header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+
+        @media (max-width: 500px) {
+          gap: 8px;
+        }
+
+        h1 {
+          font-size: 40px;
+
+          @media (max-width: 1010px) {
+            font-size: 30px;
+          }
+        }
+
+        p {
+          color: #c7c7c7;
+          // width: 80%;
+          font-size: 15px;
+
+          @media (max-width: 500px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .about-content {
+        display: flex;
+        gap: 10px;
+        height: 40%;
+        flex-wrap: wrap;
+
+        @media (max-width: 700px) {
+          flex-wrap: nowrap;
+          height: 50%;
+          margin: auto;
+        }
+
+        @media (max-width: 500px) {
+          height: 280px;
+          flex-wrap: wrap;
+          margin: auto;
+          overflow: hidden;
+          margin: auto;
+          overflow-y: scroll;
+        }
+
+        .content {
+          flex: 1;
+          list-style: none;
+          background: #232329;
+          padding: 18px 23px;
+          border-radius: 10px;
+          transition: transform 0.3s ease;
+
+          @media (max-width: 700px) {
+            flex: 0.5;
+          }
+
+          @media (max-width: 500px) {
+            height: 210px;
+            flex: 1;
+          }
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+
+          h3 {
+            font-size: 15px;
+            color: #0f9;
+            margin-bottom: 15px;
+          }
+
+          h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+
+          .wraped {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            span {
+              height: 6px;
+              width: 6px;
+              background: #0f9;
+              border-radius: 50%;
+            }
+
+            p {
+              font-size: 15px;
+              color: #c7c7c7;
+            }
+          }
+        }
+
+        .everything-about-experience {
+          flex: none;
+        }
+      }
+
+      .skills-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 20px;
+
+        @media (max-width: 700px) {
+          gap: 10px;
+        }
+
+        @media (max-width: 500px) {
+          height: 200px;
+          grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+          overflow-y: scroll;
+        }
+
+        .skill-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: #232329;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+
+          @media (max-width: 700px) {
+            padding: 15px;
+          }
+
+          @media (max-width: 500px) {
+            padding: 10px;
+          }
+
+          &:hover {
+            background-color: #0f9;
+            transform: translateY(-5px);
+          }
+
+          svg {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: white;
+
+            @media (max-width: 500px) {
+              font-size: 20px;
+            }
+          }
+
+          p {
+            font-size: 15px;
+            color: white;
+            @media (max-width: 500px) {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .get-about {
+        display: flex;
+
+        @media (max-width: 1010px) {
+          gap: 15px;
+        }
+
+        @media (max-width: 930px) {
+          flex-direction: column;
+        }
+
+        @media (max-width: 500px) {
+          gap: 1px;
+        }
+
+        .about-container-section {
+          flex: 1;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+
+            @media (max-width: 700px) {
+              gap: 10px;
+            }
+
+            @media (max-width: 500px) {
+              gap: 1px;
+            }
+
+            li {
+              display: flex;
+              justify-content: flex-start;
+              gap: 35px;
+
+              p {
+                width: none;
+                @media (max-width: 1010px) {
+                  font-size: 14px;
+                }
+              }
+
+              h2 {
+                font-size: 18px;
+
+                @media (max-width: 1010px) {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

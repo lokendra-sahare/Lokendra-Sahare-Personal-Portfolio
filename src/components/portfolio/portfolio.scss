@@ -1,0 +1,162 @@
+@import "../../App.scss";
+
+.portfolio {
+  position: relative;
+  min-height: 100vh;
+
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    text-align: center;
+    color: #0f9;
+    font-size: 36px;
+
+    @include tablet {
+      font-size: 28px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    .progressBar {
+      height: 10px;
+      background: #0f9;
+      border-radius: 50%;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 117vh; // Ensure each section takes up the full viewport height
+    overflow: hidden;
+
+    @include tablet {
+      height: 100%;
+    }
+
+    .wrapper {
+      max-width: 1366px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      @include tablet {
+        flex-direction: column;
+      }
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      .imageContainer {
+        flex: 1;
+        height: 100%; // Adjusted to take full height
+
+        @include tablet {
+          width: 50%;
+          height: 200px;
+        }
+
+        @include mobile {
+          width: 100%;
+          height: 300px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          @include tablet {
+            object-fit: contain;
+          }
+
+          @include mobile {
+            object-fit: contain;
+          }
+        }
+      }
+
+      .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // Ensures the text is vertically centered
+        gap: 30px;
+
+        @include tablet {
+          transform: none !important;
+          padding: 20px;
+          align-items: center;
+          text-align: center;
+        }
+
+        @include mobile {
+          transform: none !important;
+          padding: 10px;
+          align-items: center;
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 50px; // Adjusted for better text scaling
+
+          @include tablet {
+            font-size: 60px;
+          }
+
+          @include mobile {
+            font-size: 25px;
+          }
+        }
+
+        p {
+          color: #c7c7c7;
+          font-size: 18px; // Slightly smaller text for better readability
+
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+
+        .buttons {
+          display: flex;
+          gap: 20px;
+
+          a {
+            text-decoration: none;
+
+            button {
+              width: 150px;
+              font-weight: 500;
+              color: black;
+              padding: 10px 15px;
+              margin-left: 0; // Adjusted margin
+              border-radius: 20px;
+              background: #00ff99;
+              border: 1px solid #00ff99;
+              font-size: 14px;
+              box-shadow: 0 0 10px rgba(0, 255, 153, 0.6); // Add glow effect
+              transition: box-shadow 0.3s ease-in-out,
+                transform 0.3s ease-in-out; // Smooth transition for hover effect
+              cursor: pointer;
+
+              &:hover {
+                box-shadow: 0 0 15px rgba(0, 255, 153, 0.9); // Intensify the glow on hover
+                transform: scale(1.05); // Slightly enlarge on hover
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
