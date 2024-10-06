@@ -1,4 +1,4 @@
-import "./sidebar.scss";
+import "./Sidebar.scss";
 import Links from "./Links";
 import ToggleButton from "./ToggleButton";
 import { useState } from "react";
