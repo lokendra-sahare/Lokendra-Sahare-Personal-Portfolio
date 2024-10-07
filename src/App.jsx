@@ -8,7 +8,7 @@ import About from "./components/about/About";
 import { Portfolio } from "./components/portfolio/Portfolio";
 import { Contact } from "./components/contact/Contact";
 import { Sidebar } from "./components/homepage/sidebar/Sidebar";
-import AllProjects from "./components/allProjects/AllProjects";
+import AllProjects from "./components/all projcts/AllProjects";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for controlling the sidebar
