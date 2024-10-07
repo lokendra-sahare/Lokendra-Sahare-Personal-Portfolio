@@ -61,10 +61,10 @@ export const Portfolio = () => {
               <h2>{item.title}</h2>
               <p>{item.desc}</p>
               <div className="buttons">
-                <a href={`${item.link}`}>
+                <a href={`${item.link}`} target="_blank">
                   <button>See Demo</button>
                 </a>
-                <a href={`${item.link2}`}>
+                <a href={`${item.link2}`} target="_blank">
                   <button>View Code</button>
                 </a>
               </div>

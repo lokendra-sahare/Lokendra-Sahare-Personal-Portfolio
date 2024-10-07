@@ -14,7 +14,12 @@ const Navbar = () => {
             <a href="#Contact">Hire me</a>
           </button>
           <button>
-            <a href="#">Download CV</a>
+            <a
+              href="https://drive.google.com/file/d/1rdrkaRIa3Z1Y7cYlrhe-eNf0oSOoKRh1/view?usp=sharing"
+              target="_blank"
+            >
+              Download CV
+            </a>
           </button>
         </div>
       </div>

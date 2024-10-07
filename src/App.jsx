@@ -8,7 +8,7 @@ import About from "./components/about/About";
 import { Portfolio } from "./components/portfolio/Portfolio";
 import { Contact } from "./components/contact/Contact";
 import { Sidebar } from "./components/homepage/sidebar/Sidebar";
-import AllProjects from "./components/all projcts/AllProjects";
+import AllProjects from "./components/allProjects/AllProjects";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for controlling the sidebar
@@ -26,7 +26,7 @@ function App() {
       setTimeout(() => {
         setIsLoading(false); // Remove the spinner after the animation
       }, 1000); // Delay to match the fade-out animation duration (1 second)
-    }, 3000); // 2 seconds for demo purposes
+    }, 2000); // 2 seconds for demo purposes
 
     return () => clearTimeout(timer); // Clean up the timer
   }, []);
